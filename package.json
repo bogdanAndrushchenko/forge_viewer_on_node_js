@@ -1,0 +1,25 @@
+{
+  "name": "forge_training",
+  "version": "1.0.0",
+  "description": "learning forge viewer",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "forge",
+    "autodesk",
+    "forgeviewer"
+  ],
+  "author": "Bogdan Andrushchenko <bandrushchenko15@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "forge-apis": "^0.8.5",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.7"
+  }
+}
