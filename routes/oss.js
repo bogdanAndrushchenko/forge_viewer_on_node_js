@@ -1,7 +1,7 @@
 const express = require('express');
 const multer = require('multer');
 
-const {getClient, getInternalToken} = require('./common/oauth');
+const {getToken} = require('./middlewares/get_token');
 const {
     getBucketController,
     createBucketController, uploadController
@@ -10,12 +10,7 @@ const {
 const router = express.Router();
 
 // middleware
-router.use(async (req, res, next) => {
-    const token = await getInternalToken();
-    req.oauth_token = token;
-    req.oauth_client = getClient();
-    next();
-});
+router.use(getToken);
 
 router.get('./buckets', getBucketController)
     .post('./buckets', createBucketController);
