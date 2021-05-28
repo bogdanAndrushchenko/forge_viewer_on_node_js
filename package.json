@@ -6,6 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "start:dev": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "develop": "concurrently \"npm run start:dev\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -19,7 +21,10 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "forge-apis": "^0.8.5",
-    "multer": "^1.4.2",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
     "nodemon": "^2.0.7"
   }
 }
