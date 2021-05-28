@@ -10,7 +10,7 @@ if (config.credentials.client_secret === null || config.credentials.client_id ==
 }
 
 const app = express();
-
+// console.log(path.join('client'))
 app.use(express.static(path.join('public')));
 app.use(express.json({limit:"50mb"}));
 app.use('/api/forge/oauth', require('./routes/oauth'));
