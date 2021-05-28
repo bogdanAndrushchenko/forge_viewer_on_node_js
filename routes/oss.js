@@ -1,7 +1,7 @@
 const express = require('express');
 const multer = require('multer');
 
-const {getToken} = require('./middlewares/get_token');
+const {getToken} = require('./common/get_token');
 const {
     getBucketController,
     createBucketController, uploadController

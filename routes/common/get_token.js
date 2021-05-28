@@ -1,4 +1,4 @@
-const {getClient, getInternalToken} = require('../common/oauth');
+const {getClient, getInternalToken} = require('./oauth');
 
 const getToken = async (req, res, next) => {
     const token = await getInternalToken();

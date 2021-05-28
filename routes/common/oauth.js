@@ -24,7 +24,7 @@ const getToken = async (scopes) => {
 
 const getPublicToken = async _ => getToken(config.scopes.public);
 const getInternalToken = async _ => getToken(config.scopes.internal);
-
+console.log(config.credentials.client_id,"client id")
 module.exports = {
     getClient, getPublicToken, getInternalToken
 }
